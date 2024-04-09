@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">          
+    <title>Condition statement</title>
+</head>
+<body>
+    <h1>Condition statement</h1>
+    <h4>Elvis operator</h4>
+    <p>Ternary operator</p>
+    <h2>User is:<span th:style="${isActive} ? 'color:green' : 'color:red'"
+                      th:text="${isActive} ? 'Active' : 'Not Active'">
+                </span>
+    </h2>
+
+    <p>if and unless </p>
+    <h1 th:if="${gender}== 'M' "> Male</h1>
+    <h1 th:unless="${gender} == 'M' ">female</h1>
+
+    <p>Switch case</p>
+
+    <div th:switch="${#lists.size(mylist)}">
+        <h2 th:case="0"> List contain zero elements</h2>
+        <h2 th:case="1">list contain one element</h2>
+        <h2 th:case="*">List contain more element</h2>
+
+    </div>
+</body>
+</html>

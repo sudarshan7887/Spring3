@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Element </title>
+</head>
+<body>
+    <h1>Traversing element using loop</h1>
+
+    <!-- return whole list -->
+    <h3  th:text=" 'the name of students:' + ${names}"></h3>
+
+    <!-- Traversing element -->
+    <ul>
+        <!-- <li th:each="n:${names}">
+            <span th:text="${n}"></span>
+        </li> -->
+
+        <li th:each="n,status: ${names}">
+            <span th:text="${status.index} +' ' + ${n}"></span>
+        </li>
+
+        <!-- if else -->
+        <li th:each="n,status:${names}">
+            <span th:style="${status.odd} ? 'color:red;font-weight:bold':' ' " th:text="${status.index} +' ' + ${n}"></span>
+        </li>
+    </ul>
+
+
+</body>
+</html>

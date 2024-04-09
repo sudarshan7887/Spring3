@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\sudar\OneDrive\Desktop\Spring Core\.metadata\.plugins\org.eclipse.jdt.core
+444748769.index
+359948858.index
+1828026965.index
+1865797976.index
